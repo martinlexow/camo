@@ -19,7 +19,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        guard let created = desktopCreated else { return }
+        guard let created = desktopCreated else {
+            print("Error: Couldn’t get com.apple.finder CreateDesktop")
+            return
+        }
         
         // Menu
         let menuBarMenu = NSMenu()
@@ -83,9 +86,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let response = execute(path: defaultsLaunchPath, arguments: arguments)
         if let output = response.output {
-            if output == "1\n" || output == "1" {
+            if output == "1\n" || output == "1" || output == "true\n" || output == "true" {
                 return true
-            } else if output == "0\n" || output == "0" {
+            } else if output == "0\n" || output == "0" || output == "false\n" || output == "false" {
                 return false
             }
         }
