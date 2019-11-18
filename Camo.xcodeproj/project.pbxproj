@@ -8,19 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2D523A0D2382D16F002AFA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D523A0C2382D16F002AFA9A /* AppDelegate.swift */; };
-		2D523A0F2382D16F002AFA9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D523A0E2382D16F002AFA9A /* ViewController.swift */; };
 		2D523A112382D174002AFA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D523A102382D174002AFA9A /* Assets.xcassets */; };
-		2D523A142382D175002AFA9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D523A122382D175002AFA9A /* Main.storyboard */; };
+		2D523A202382EC84002AFA9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D523A1F2382EC84002AFA9A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D523A092382D16F002AFA9A /* Camo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D523A0C2382D16F002AFA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D523A0E2382D16F002AFA9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D523A102382D174002AFA9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2D523A132382D175002AFA9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D523A152382D175002AFA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D523A162382D175002AFA9A /* Camo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Camo.entitlements; sourceTree = "<group>"; };
+		2D523A1E2382E05B002AFA9A /* Camo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Camo.entitlements; sourceTree = "<group>"; };
+		2D523A1F2382EC84002AFA9A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +52,10 @@
 			isa = PBXGroup;
 			children = (
 				2D523A0C2382D16F002AFA9A /* AppDelegate.swift */,
-				2D523A0E2382D16F002AFA9A /* ViewController.swift */,
+				2D523A1F2382EC84002AFA9A /* Main.storyboard */,
 				2D523A102382D174002AFA9A /* Assets.xcassets */,
-				2D523A122382D175002AFA9A /* Main.storyboard */,
 				2D523A152382D175002AFA9A /* Info.plist */,
-				2D523A162382D175002AFA9A /* Camo.entitlements */,
+				2D523A1E2382E05B002AFA9A /* Camo.entitlements */,
 			);
 			path = Camo;
 			sourceTree = "<group>";
@@ -122,7 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D523A112382D174002AFA9A /* Assets.xcassets in Resources */,
-				2D523A142382D175002AFA9A /* Main.storyboard in Resources */,
+				2D523A202382EC84002AFA9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,23 +130,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D523A0F2382D16F002AFA9A /* ViewController.swift in Sources */,
 				2D523A0D2382D16F002AFA9A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2D523A122382D175002AFA9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2D523A132382D175002AFA9A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2D523A172382D175002AFA9A /* Debug */ = {
@@ -270,17 +255,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Camo/Camo.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 276HSJ6V54;
-				ENABLE_HARDENED_RUNTIME = YES;
+				CURRENT_PROJECT_VERSION = 100;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = Camo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = de.ixeau.Camo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -290,17 +278,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Camo/Camo.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 276HSJ6V54;
-				ENABLE_HARDENED_RUNTIME = YES;
+				CURRENT_PROJECT_VERSION = 100;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = Camo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = de.ixeau.Camo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
