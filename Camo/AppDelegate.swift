@@ -77,6 +77,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     
     
+    private var triedCreatingKeyEntry = false
+    
+    private func createKeyEntry() {
+        
+        var arguments = ["write"]
+        arguments.append("com.apple.finder")
+        arguments.append("CreateDesktop")
+        arguments.append("-bool")
+        arguments.append("true")
+            
+        let _ = execute(path: defaultsLaunchPath, arguments: arguments)
+        triedCreatingKeyEntry = true
+        
+    }
+    
+    
+    
     private var desktopCreated: Bool? {
         
         var arguments = ["read"]
@@ -92,7 +109,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 return false
             }
         }
-        return nil
+        
+        if triedCreatingKeyEntry {
+            return nil
+        } else {
+            createKeyEntry()
+            return self.desktopCreated
+        }
         
     }
     
